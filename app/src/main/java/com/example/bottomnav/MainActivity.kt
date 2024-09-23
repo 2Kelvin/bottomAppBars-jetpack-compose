@@ -19,14 +19,22 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             BottomNavTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                TheApp()
             }
         }
+    }
+}
+
+@Composable
+fun TheApp(modifier: Modifier = Modifier) {
+    Scaffold(
+        bottomBar = { CustomRowBottomAppbar() },
+        modifier = Modifier.fillMaxSize()
+    ) { innerPadding ->
+        Greeting(
+            name = "Android",
+            modifier = Modifier.padding(innerPadding)
+        )
     }
 }
 
@@ -42,6 +50,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     BottomNavTheme {
-        Greeting("Android")
+        TheApp()
     }
 }
