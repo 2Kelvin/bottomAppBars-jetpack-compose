@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             BottomNavTheme {
-                ScaffoldWithCustomBottomAppBar()
+                ScaffoldWithNormalBottomAppBarWithFB()
             }
         }
     }
@@ -70,10 +70,7 @@ fun ScaffoldWithNormalBottomAppBarWithFB(modifier: Modifier = Modifier) {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Practicing $name!",
-        modifier = modifier
-    )
+    Text(text = "Practicing $name!", modifier = modifier)
 }
 
 /**
