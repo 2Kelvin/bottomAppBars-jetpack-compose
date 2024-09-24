@@ -17,6 +17,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
+/**
+ * My custom made Bottom App bar made using a row and icon buttons
+ */
 @Composable
 fun CustomRowBottomAppbar(modifier: Modifier = Modifier) {
     BottomAppBar {
